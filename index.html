@@ -439,7 +439,7 @@
                         shanghai: {
                             title: "🏮 2026 上海順路路書", subtitle: "4日3夜 1家8口無障礙之旅", subIcon: "fa-solid fa-lantern",
                             bgMain: "#FFF3E0", textDark: "#BF360C", textLight: "#E64A19", accentMain: "#D84315", borderLight: "#FFAB91",
-                            shadow: "0 8px 32px rgba(216, 67, 21, 0.15)", headerImg: "url('https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=1000&auto=format&fit=crop')",
+                            shadow: "0 8px 32px rgba(216, 67, 21, 0.15)", headerImg: "url('./header.jpg')",
                             headerGradient: "linear-gradient(135deg, rgba(255, 171, 145, 0.3) 0%, rgba(216, 67, 21, 0.75) 100%)",
                             effect: 'none', effectEmoji: '🏮'
                         }
@@ -468,7 +468,6 @@
             },
             methods: {
                 fetchWeather() {
-                    // 已強制將天氣 API 定位為上海
                     let query = 'Shanghai,CN'; let displayName = '上海';
                     
                     this.weather.city_name = displayName;
@@ -494,7 +493,6 @@
                     return map[cat] || '行程';
                 },
                 getTransportIcon(type) {
-                    // 新增了 car 的 icon 對應
                     const map = { walk: 'fa-person-walking', train: 'fa-train-subway', flight: 'fa-plane', car: 'fa-car' };
                     return `fa-solid ${map[type] || 'fa-arrow-right'}`;
                 },
