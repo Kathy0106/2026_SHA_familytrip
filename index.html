@@ -353,14 +353,14 @@
         createApp({
             data() {
                 return {
-                    currentTrip: 'shanghai', // 修改為上海
+                    currentTrip: 'shanghai',
                     activeTab: `itinerary`,
                     selectedDayIndex: 0, 
                     showSettings: false, showHotelModal: false, alarmsOpen: true, newShopItem: '',
                     weather: { city_name: `上海`, temp: `--`, icon: `fa-spinner fa-spin` },
                     apiKey: `cc2dab2806da14aec6dab2ed8260a1c4`, 
                     settings: { fontSize: 15 },
-                    exchangeRate: 1.1, // 暫定人仔匯率
+                    exchangeRate: 1.1, 
                     
                     trips: {
                         shanghai: {
@@ -399,37 +399,37 @@
                             
                             days: [
                                 { weekday: 'Fri', dateStr: '11/28', events: [
-                                    { time: '11:35', title: '順利抵達浦東機場 🛬', departTime: '12:30', travelTime: '0 min', desc: '乘搭 HX236 抵達，攞齊行李後聯絡預約好嘅 2 部六座商務車 (如別克 GL8)。', category: 'flight', transportType: 'walk', loc: '浦東國際機場' },
-                                    { time: '13:30', title: '入住 如家精選酒店 🏨', departTime: '14:00', travelTime: '60 min', desc: '📍 地址: 南京路步行街店。\n酒店門口全平路，安頓好放低行李即刻出發！', category: 'hotel', transportType: 'car', loc: '如家精選酒店(上海南京路步行街店)' },
-                                    { time: '14:00', title: '午餐：裕興記麵館 🍜', departTime: '15:15', travelTime: '10 min', desc: '打卡老字號！必食招牌「蟹黃油拌麵」同「三蝦麵」🦀。', category: 'food', transportType: 'walk', loc: '裕興記麵館(人民廣場店)' },
-                                    { time: '15:30', title: '百年洋房：Prada 榮宅 🏡', departTime: '16:30', travelTime: '15 min', desc: '叫車直達陝西北路，打卡老上海名門花園洋房。外圍平整，超級適合影全家福 📸。', category: 'sightseeing', transportType: 'car', loc: 'PRADA荣宅', action: '⚠️ 溫馨提示：逢星期一休館，今日星期五照常開放，但必須預先喺微信小程序預約！' },
-                                    { time: '16:45', title: '外白渡橋 ➔ Manner Coffee ☕', departTime: '18:15', travelTime: '15 min', desc: '先去外白渡橋影相，然後過去 Manner Coffee (國客濱江店) 坐低休息，睇對岸陸家嘴日落同夜景 🌉。', category: 'sightseeing', transportType: 'car', loc: '外白渡橋', loc2Name: 'Manner Coffee' },
-                                    { time: '18:30', title: '晚餐：柿合緣 (上海菜) 🥢', departTime: '19:45', travelTime: '15 min', desc: '品嚐正宗上海濃油赤醬及特色蟹粉菜 🥘。', category: 'food', transportType: 'car', info: '💡 溫馨提示：位於商場內，有無障礙電梯，對輪椅非常友善。' },
-                                    { time: '20:00', title: '豫園商城 古樓夜景 🏮', departTime: '20:45', travelTime: '8 min', desc: '叫車直達豫園商城。走進巷弄內往上仰拍，就能拍到圖片裡層層疊疊、金碧輝煌的古建築樓閣大景 ✨！仲有九曲橋打卡。', category: 'highlight', transportType: 'car', loc: '豫園商城', action: '♿ 輪椅資訊：整區都是全平路，輪椅非常方便推行！提司機喺方便上落客嘅位置停車。' },
-                                    { time: '21:00', title: '外灘無障礙觀景台 🌃', departTime: '21:45', travelTime: '10 min', desc: '從豫園順路叫車至外灘，沿平緩斜坡直上觀景台，欣賞萬國建築群夜景 ✨。', category: 'sightseeing', transportType: 'car', loc: '外灘觀景大道', info: '💡 外灘通常夜晚 10 點熄燈，21:00 上去時間完美。' }
+                                    { time: '11:35', title: '順利抵達浦東機場 🛬', departTime: '12:30', travelTime: '0 min', desc: '乘搭 HX236 抵達，攞齊行李後聯絡預約好嘅 2 部六座商務車 (如別克 GL8)。\n🚇 地鐵備用：2號線/磁浮線「浦東國際機場」站', category: 'flight', transportType: 'walk', loc: '浦東國際機場' },
+                                    { time: '13:30', title: '入住 如家精選酒店 🏨', departTime: '14:00', travelTime: '60 min', desc: '📍 地址: 南京路步行街店。\n酒店門口全平路，安頓好放低行李即刻出發！\n🚇 地鐵：1/2/8號線「人民廣場」站 (14號出口)', category: 'hotel', transportType: 'car', loc: '如家精選酒店(上海南京路步行街店)' },
+                                    { time: '14:00', title: '午餐：裕興記麵館 🍜', departTime: '15:15', travelTime: '10 min', desc: '打卡老字號！必食招牌「蟹黃油拌麵」同「三蝦麵」🦀。\n🚇 地鐵：1/2/8號線「人民廣場」站 (14或19號出口)', category: 'food', transportType: 'walk', loc: '裕興記麵館(人民廣場店)' },
+                                    { time: '15:30', title: '百年洋房：Prada 榮宅 🏡', departTime: '16:30', travelTime: '15 min', desc: '叫車直達陝西北路，打卡老上海名門花園洋房。外圍平整，超級適合影全家福 📸。\n🚇 地鐵：2/12/13號線「南京西路」站 (12號出口)', category: 'sightseeing', transportType: 'car', loc: 'PRADA荣宅', action: '⚠️ 溫馨提示：逢星期一休館，今日星期五照常開放，但必須預先喺微信小程序預約！' },
+                                    { time: '16:45', title: '外白渡橋 ➔ Manner Coffee ☕', departTime: '18:15', travelTime: '15 min', desc: '先去外白渡橋影相，然後過去 Manner Coffee (國客濱江店) 坐低休息，睇對岸陸家嘴日落同夜景 🌉。\n🚇 地鐵：12號線「國際客運中心」站 (3號出口)', category: 'sightseeing', transportType: 'car', loc: '外白渡橋', loc2Name: 'Manner Coffee' },
+                                    { time: '18:30', title: '晚餐：柿合緣 (上海菜) 🥢', departTime: '19:45', travelTime: '15 min', desc: '品嚐正宗上海濃油赤醬及特色蟹粉菜 🥘。\n🚇 地鐵：2/14號線「陸家嘴」站 (IFC等分店)', category: 'food', transportType: 'car', info: '💡 溫馨提示：位於商場內，有無障礙電梯，對輪椅非常友善。' },
+                                    { time: '20:00', title: '豫園商城 古樓夜景 🏮', departTime: '20:45', travelTime: '8 min', desc: '叫車直達豫園商城。走進巷弄內往上仰拍，就能拍到圖片裡層層疊疊、金碧輝煌的古建築樓閣大景 ✨！仲有九曲橋打卡。\n🚇 地鐵：10/14號線「豫園」站 (1/3號出口)', category: 'highlight', transportType: 'car', loc: '豫園商城', action: '♿ 輪椅資訊：整區都是全平路，輪椅非常方便推行！提司機喺方便上落客嘅位置停車。' },
+                                    { time: '21:00', title: '外灘無障礙觀景台 🌃', departTime: '21:45', travelTime: '10 min', desc: '從豫園順路叫車至外灘，沿平緩斜坡直上觀景台，欣賞萬國建築群夜景 ✨。\n🚇 地鐵：2/10號線「南京東路」站 (2/7號出口)', category: 'sightseeing', transportType: 'car', loc: '外灘觀景大道', info: '💡 外灘通常夜晚 10 點熄燈，21:00 上去時間完美。' }
                                 ]},
                                 { weekday: 'Sat', dateStr: '11/29', events: [
-                                    { time: '08:30', title: '早餐：萊萊小吃湯包館 🥟', departTime: '09:45', travelTime: '3 min', desc: '距離酒店極近！後生仔去買「蟹粉小籠包」外賣返酒店房，等長輩可以舒舒服服享用 🥡。', category: 'food', transportType: 'walk', loc: '萊萊小吃' },
-                                    { time: '10:00', title: '地道煙火氣：嘉陵/蒙西菜市場 🍢', departTime: '11:15', travelTime: '15 min', desc: '叫車去菜市場周邊，掃街食上海「四大金剛」（油燉子、蟹殼黃、粢飯糕）🤤。', category: 'food', transportType: 'car', loc: '蒙西菜市場' },
-                                    { time: '11:30', title: '法租界風情：安福路 ➔ RAC BAR 🌳', departTime: '13:45', travelTime: '15 min', desc: '喺徐匯區安福路漫步，感受法租界梧桐樹風情 🍂，於人氣打卡店 RAC BAR 食法式可麗餅 (Galette) 同 Brunch 🍳。', category: 'highlight', transportType: 'car', loc: 'RAC BAR' },
-                                    { time: '14:00', title: '冠軍咖啡：Captain George ☕', departTime: '14:45', travelTime: '10 min', desc: '朝聖 2025 世界咖啡冠軍店 🏆，歎頂級精品風味咖啡。', category: 'food', transportType: 'car' },
-                                    { time: '15:00', title: '靜安寺 ➔ 張園 ⛩️', departTime: '16:30', travelTime: '10 min', desc: '打卡市中心金碧輝煌嘅靜安寺，然後去修復得超靚嘅「張園」漫步石庫門建築群 📷。', category: 'sightseeing', transportType: 'car', loc: '靜安寺', info: '💡 靜安寺 17:00 關門，15:00 過去時間充足。' },
-                                    { time: '17:00', title: '浦東濱江大道賞日落 🌅', departTime: '18:30', travelTime: '20 min', desc: '叫車過江去浦東濱江大道，推輪椅睇對岸外灘日落極寫意！', category: 'sightseeing', transportType: 'car', loc: '濱江大道', action: '⚠️ 注意：上海11月底日落時間大約係 16:50，建議可以 16:30 左右提早到達，捕捉 Magic Hour！路面極寬平，輪椅極友善。' },
-                                    { time: '19:00', title: '晚餐：蟹珍香 🦀', departTime: '21:00', travelTime: '15 min', desc: '全家大擦一餐！必點招牌「蟹黃麵」同埋「蟹黃金飯」🍚。', category: 'food', transportType: 'car', loc: '蟹珍香' }
+                                    { time: '08:30', title: '早餐：萊萊小吃湯包館 🥟', departTime: '09:45', travelTime: '3 min', desc: '距離酒店極近！後生仔去買「蟹粉小籠包」外賣返酒店房，等長輩可以舒舒服服享用 🥡。\n🚇 地鐵：1/2/8號線「人民廣場」站 (14號出口)', category: 'food', transportType: 'walk', loc: '萊萊小吃' },
+                                    { time: '10:00', title: '地道煙火氣：嘉陵/蒙西菜市場 🍢', departTime: '11:15', travelTime: '15 min', desc: '叫車去菜市場周邊，掃街食上海「四大金剛」（油燉子、蟹殼黃、粢飯糕）🤤。\n🚇 地鐵：9/13號線「馬當路」站 (3號出口)', category: 'food', transportType: 'car', loc: '蒙西菜市場' },
+                                    { time: '11:30', title: '法租界風情：安福路 ➔ RAC BAR 🌳', departTime: '13:45', travelTime: '15 min', desc: '喺徐匯區安福路漫步，感受法租界梧桐樹風情 🍂，於人氣打卡店 RAC BAR 食法式可麗餅 (Galette) 同 Brunch 🍳。\n🚇 地鐵：1/7號線「常熟路」站 (8號出口) 或 10號線「上海圖書館」站', category: 'highlight', transportType: 'car', loc: 'RAC BAR' },
+                                    { time: '14:00', title: '冠軍咖啡：Captain George ☕', departTime: '14:45', travelTime: '10 min', desc: '朝聖 2025 世界咖啡冠軍店 🏆，歎頂級精品風味咖啡。\n🚇 地鐵：市區核心地鐵站周邊 (請留意快閃分店動態)', category: 'food', transportType: 'car' },
+                                    { time: '15:00', title: '靜安寺 ➔ 張園 ⛩️', departTime: '16:30', travelTime: '10 min', desc: '打卡市中心金碧輝煌嘅靜安寺，然後去修復得超靚嘅「張園」漫步石庫門建築群 📷。\n🚇 地鐵：2/7/14號線「靜安寺」站 (1號出口) ➔ 2/12/13號線「南京西路」站 (4號出口)', category: 'sightseeing', transportType: 'car', loc: '靜安寺', info: '💡 靜安寺 17:00 關門，15:00 過去時間充足。' },
+                                    { time: '17:00', title: '浦東濱江大道賞日落 🌅', departTime: '18:30', travelTime: '20 min', desc: '叫車過江去浦東濱江大道，推輪椅睇對岸外灘日落極寫意！\n🚇 地鐵：2/14號線「陸家嘴」站 (2號出口)', category: 'sightseeing', transportType: 'car', loc: '濱江大道', action: '⚠️ 注意：上海11月底日落時間大約係 16:50，建議可以 16:30 左右提早到達，捕捉 Magic Hour！路面極寬平，輪椅極友善。' },
+                                    { time: '19:00', title: '晚餐：蟹珍香 🦀', departTime: '21:00', travelTime: '15 min', desc: '全家大擦一餐！必點招牌「蟹黃麵」同埋「蟹黃金飯」🍚。\n🚇 地鐵：2/10號線「南京東路」站 (4號出口)', category: 'food', transportType: 'car', loc: '蟹珍香' }
                                 ]},
                                 { weekday: 'Sun', dateStr: '11/30', events: [
-                                    { time: '10:00', title: '文藝漫步：愚園路 🍂', departTime: '12:00', travelTime: '15 min', desc: '漫步百年文藝馬路，行人路寬平，趁今日好天氣幫阿樹同全家影靚靚生日大合照 📸🎉。', category: 'sightseeing', transportType: 'car', loc: '愚園路' },
-                                    { time: '12:30', title: '午餐：永豐麵館 🍜', departTime: '14:00', travelTime: '15 min', desc: '米芝蓮指南推薦！必食招牌「爆鱔麵」，記得為壽星阿樹點一碗長壽麵賀壽 🥢。', category: 'food', transportType: 'car', loc: '永豐麵館' },
-                                    { time: '14:30', title: '酒店休整 / 南京路觀光小火車 🚂', departTime: '16:30', travelTime: '15 min', desc: '下午可以返酒店休息叉叉電，或者帶長輩坐「南京路觀光小火車」輕鬆遊覽步行街 🚋。', category: 'sightseeing', transportType: 'car', loc: '南京路步行街' },
-                                    { time: '17:00', title: '陸家嘴空中連廊夜景 🏙️', departTime: '18:15', travelTime: '15 min', desc: '叫車去陸家嘴，搭無障礙電梯上天橋，近距離仰望「三件套」摩天大樓 🏢 影全家福。', category: 'sightseeing', transportType: 'car', loc: '陸家嘴環形天橋' },
-                                    { time: '18:30', title: '🎂 阿樹生日大餐：人和館 🎊', departTime: '21:00', travelTime: '20 min', desc: '米芝蓮一星老上海風情 🎶。必食金牌蟹粉撈飯、蟹粉豆腐、招牌紅燒肉。餐後推出生日蛋糕，全家一齊切蛋糕唱生日歌 💯！', category: 'highlight', transportType: 'car', loc: '人和館(肇嘉浜路店)', action: '⚠️ 極度重要：必須提早預約並交代係慶祝生日，同時要求預留輪椅方便出入嘅闊落位置！' }
+                                    { time: '10:00', title: '文藝漫步：愚園路 🍂', departTime: '12:00', travelTime: '15 min', desc: '漫步百年文藝馬路，行人路寬平，趁今日好天氣幫阿樹同全家影靚靚生日大合照 📸🎉。\n🚇 地鐵：2/11號線「江蘇路」站 (2/3號出口)', category: 'sightseeing', transportType: 'car', loc: '愚園路' },
+                                    { time: '12:30', title: '午餐：永豐麵館 🍜', departTime: '14:00', travelTime: '15 min', desc: '米芝蓮指南推薦！必食招牌「爆鱔麵」，記得為壽星阿樹點一碗長壽麵賀壽 🥢。\n🚇 地鐵：近市中心地鐵站', category: 'food', transportType: 'car', loc: '永豐麵館' },
+                                    { time: '14:30', title: '酒店休整 / 南京路觀光小火車 🚂', departTime: '16:30', travelTime: '15 min', desc: '下午可以返酒店休息叉叉電，或者帶長輩坐「南京路觀光小火車」輕鬆遊覽步行街 🚋。\n🚇 地鐵：1/2/8號線「人民廣場」站 或 2/10號線「南京東路」站', category: 'sightseeing', transportType: 'car', loc: '南京路步行街' },
+                                    { time: '17:00', title: '陸家嘴空中連廊夜景 🏙️', departTime: '18:15', travelTime: '15 min', desc: '叫車去陸家嘴，搭無障礙電梯上天橋，近距離仰望「三件套」摩天大樓 🏢 影全家福。\n🚇 地鐵：2/14號線「陸家嘴」站 (1號出口)', category: 'sightseeing', transportType: 'car', loc: '陸家嘴環形天橋' },
+                                    { time: '18:30', title: '🎂 阿樹生日大餐：人和館 🎊', departTime: '21:00', travelTime: '20 min', desc: '米芝蓮一星老上海風情 🎶。必食金牌蟹粉撈飯、蟹粉豆腐、招牌紅燒肉。餐後推出生日蛋糕，全家一齊切蛋糕唱生日歌 💯！\n🚇 地鐵：7/9號線「肇嘉浜路」站 (2號出口)', category: 'highlight', transportType: 'car', loc: '人和館(肇嘉浜路店)', action: '⚠️ 極度重要：必須提早預約並交代係慶祝生日，同時要求預留輪椅方便出入嘅闊落位置！' }
                                 ]},
                                 { weekday: 'Mon', dateStr: '12/01', events: [
-                                    { time: '09:30', title: '漫步：外灘源 / 圓明園路 🏛️', departTime: '10:45', travelTime: '10 min', desc: '距離酒店好近，上海最靚嘅英式紅磚建築群 🧱。把握機會影最後一組全家福。', category: 'sightseeing', transportType: 'car', loc: '圓明園路', action: '♿ 輪椅資訊：全平坦磚路對輪椅極度友善！' },
-                                    { time: '11:00', title: '午餐：小楊生煎 + 饞三尺小籠包 🥟', departTime: '12:00', travelTime: '10 min', desc: '返到酒店樓下附近，一次過食勻小楊生煎同饞三尺蟹黃小籠包，補齊最後嘅點心願望 😋。', category: 'food', transportType: 'walk' },
-                                    { time: '12:00', title: '伴手禮最後衝刺 🛍️', departTime: '12:45', travelTime: '10 min', desc: '買齊國際飯店蝴蝶酥 🦋、沈大成糕糰、泰康鮮肉月餅。', category: 'shopping', transportType: 'walk', action: '⚠️ 注意：國際飯店蝴蝶酥平時要排好耐隊，建議後生仔可以提早 11:00 就去排隊買定先！' },
-                                    { time: '13:00', title: '酒店退房與出發 🧳', departTime: '13:30', travelTime: '0 min', desc: '全家喺酒店大堂集合，退房並將戰利品搬上預約好嘅商務車前往浦東機場 🚐。', category: 'hotel', transportType: 'walk' },
-                                    { time: '14:30', title: '抵達浦東國際機場 ✈️', departTime: '16:30', travelTime: '60 min', desc: '辦理登機及行李托運手續。', category: 'transport', transportType: 'car', loc: '浦東國際機場' },
+                                    { time: '09:30', title: '漫步：外灘源 / 圓明園路 🏛️', departTime: '10:45', travelTime: '10 min', desc: '距離酒店好近，上海最靚嘅英式紅磚建築群 🧱。把握機會影最後一組全家福。\n🚇 地鐵：2/10號線「南京東路」站 (6號出口)', category: 'sightseeing', transportType: 'car', loc: '圓明園路', action: '♿ 輪椅資訊：全平坦磚路對輪椅極度友善！' },
+                                    { time: '11:00', title: '午餐：小楊生煎 + 饞三尺小籠包 🥟', departTime: '12:00', travelTime: '10 min', desc: '返到酒店樓下附近，一次過食勻小楊生煎同饞三尺蟹黃小籠包，補齊最後嘅點心願望 😋。\n🚇 地鐵：1/2/8號線「人民廣場」站 (14號出口)', category: 'food', transportType: 'walk' },
+                                    { time: '12:00', title: '伴手禮最後衝刺 🛍️', departTime: '12:45', travelTime: '10 min', desc: '買齊國際飯店蝴蝶酥 🦋、沈大成糕糰、泰康鮮肉月餅。\n🚇 地鐵：1/2/8號線「人民廣場」站 (8號出口)', category: 'shopping', transportType: 'walk', action: '⚠️ 注意：國際飯店蝴蝶酥平時要排好耐隊，建議後生仔可以提早 11:00 就去排隊買定先！' },
+                                    { time: '13:00', title: '酒店退房與出發 🧳', departTime: '13:30', travelTime: '0 min', desc: '全家喺酒店大堂集合，退房並將戰利品搬上預約好嘅商務車前往浦東機場 🚐。\n🚇 地鐵備用：1/2/8號線「人民廣場」站', category: 'hotel', transportType: 'walk' },
+                                    { time: '14:30', title: '抵達浦東國際機場 ✈️', departTime: '16:30', travelTime: '60 min', desc: '辦理登機及行李托運手續。\n🚇 交通：2號線/磁浮線「浦東國際機場」站', category: 'transport', transportType: 'car', loc: '浦東國際機場' },
                                     { time: '16:30', title: '航班起飛 (HX239) 🛫', departTime: '19:25', travelTime: '0 min', desc: '乘搭 HX239 航班順利返港，完美結束 1 家 8 口上海之旅！💖', category: 'flight', transportType: 'walk' }
                                 ]}
                             ]
